@@ -1,5 +1,0 @@
-
-> k6-continuous-testing@1.0.0 start /Users/gregdorward/Development/K6-continuous-testing
-> node app.js
-
-Serving running at http://127.0.0.1:3003/
