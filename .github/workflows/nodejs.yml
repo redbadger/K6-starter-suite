@@ -1,0 +1,33 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ master ]
+
+
+jobs:
+  k6_local_test:
+    name: k6 local test on macos
+    runs-on: macos-latest
+  
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Install k6 by homebrew
+      run: brew install k6
+
+    - name: Install dependencies
+      run: yarn install
+
+    - name: build
+      run: yarn start --silent &
+        
+    - name: Local k6 test
+      run: k6 run tests/index.js
+
+
+

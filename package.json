@@ -1,0 +1,31 @@
+{
+  "name": "k6-continuous-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3",
+    "start-server-and-test": "^1.11.0"
+  },
+  "scripts": {
+    "build": "node app.js",
+    "test": "k6 run tests/index.js",
+    "test:ci": "k6 run tests/index.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redbadger/K6-starter-suite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redbadger/K6-starter-suite/issues"
+  },
+  "homepage": "https://github.com/redbadger/K6-starter-suite#readme"
+}
