@@ -6,7 +6,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/courses", (req, res) => {
-  setTimeout(() => { res.send("Endpoint functioning").status(200); }, 90);
+  setTimeout(() => { res.send("Endpoint functioning").status(200); }, 260);
 });
 
 const hostname = "127.0.0.1";
