@@ -21,7 +21,7 @@ jobs:
       run: brew install k6
 
     - name: Install dependencies
-      run: yarn install
+      run: yarn --frozen-lockfile
 
     - name: build
       run: yarn start --silent &
