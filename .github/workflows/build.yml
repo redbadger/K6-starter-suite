@@ -25,7 +25,7 @@ jobs:
       run: yarn start --silent &
         
     - name: Local k6 test
-      run: k6 run --summary-export=export.json tests/index.js
+      run: yarn test
 
 
 
