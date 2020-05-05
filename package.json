@@ -14,8 +14,7 @@
   },
   "scripts": {
     "build": "node app.js",
-    "test": "k6 run tests/index.js",
-    "test:ci": "k6 run tests/index.js",
+    "test": "k6 run -o cloud tests/index.js",
     "start": "node app.js"
   },
   "repository": {

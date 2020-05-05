@@ -1,12 +1,10 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: CI pipeline with K6 integrated
 
 on:
   push:
-    branches: [ master ]
-
 
 jobs:
   k6_local_test:
@@ -25,9 +23,12 @@ jobs:
 
     - name: build
       run: yarn start --silent &
-        
+      
+    - name: Access load impact dashboard
+      run: k6 login cloud -t ${{ secrets.LoadImpactToken }}
+
     - name: Local k6 test
-      run: k6 run --summary-export=export.json tests/index.js
+      run: yarn test
 
 
 
