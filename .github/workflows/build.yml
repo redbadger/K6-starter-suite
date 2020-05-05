@@ -23,10 +23,12 @@ jobs:
 
     - name: build
       run: yarn start --silent &
-        
+      
+    - name: Access load impact dashboard
+      run: k6 login cloud -t ${{ secrets.LoadImpactToken }}
+
     - name: Local k6 test
-    - run: k6 login cloud -t ${{ secrets.LoadImpactToken }}
-    - run: yarn test
+      run: yarn test
 
 
 
