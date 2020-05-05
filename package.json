@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "node app.js",
-    "test": "k6 run --summary-export=tests/export.json tests/index.js",
+    "test": "k6 run -o cloud tests/index.js",
     "start": "node app.js"
   },
   "repository": {
