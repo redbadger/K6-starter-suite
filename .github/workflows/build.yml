@@ -25,10 +25,8 @@ jobs:
       run: yarn start --silent &
         
     - name: Local k6 test
-      with: # Set the secret as an input
-        LOAD_IMPACT_TOKEN: ${{ secrets.LoadImpactToken }}
-      run: k6 login cloud -t "$LOAD_IMPACT_TOKEN"
-      run: yarn test
+    - run: k6 login cloud -t ${{ secrets.LoadImpactToken }}
+    - run: yarn test
 
 
 
