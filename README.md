@@ -39,4 +39,6 @@ Run node server locally - `yarn start`
 
 Run K6 locally - `k6 run tests/index.js`
 
+Output data to the K6 dashboard - This required a K6 account (free trial) - https://app.k6.io/. You will need to update the secrets to contain your dashboard token - https://github.com/redbadger/K6-starter-suite/settings/secrets
+
 To see the CI pipeline in action, create a branch on your cloned repo and push new changes to GitHub (`git push origin <branch name`)
