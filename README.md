@@ -2,7 +2,7 @@
 Starter suite for continuous performance testing using K6
 
 ## Purpose
-This basic starter suite provides the foundations for setting up a continuous performance test pipeline, using GitHub actions. The concepts could equally be applied to other CI tools.
+This basic starter suite provides the foundations for setting up a continuous performance test pipeline, using K6 and GitHub actions. The concepts could equally be applied to other CI tools.
 
 The suite is a proof of concept only, running a single test against a very basic node & express server on localhost.
 
@@ -13,7 +13,10 @@ The suite is a proof of concept only, running a single test against a very basic
 - Runs within a GitHub Actions workflow on every push (this could be amended to every Pull Request or merge to master)
 - Fails if the threshold for performance is not met, consequentally failing the build
 - Prevents degradations in performance making their way into master
-- Sends graphical output to the cloud for displaying on K6's dashboards - https://app.k6.io/ (This will require you to set up a trial account, which allows for 50 test runs. Alternatively, the results can be output to the console, Grafana via InfluxDB, or as a JSON file) 
+- Sends graphical output to the cloud for displaying on K6's dashboards - https://app.k6.io/ (This will require you to set up a trial account, which allows for 50 test runs. Alternatively, the results can be output to the console, Grafana via InfluxDB, or as a JSON file)
+
+## What is this suite not?
+This is not designed to replace a comprehensive performance test, it is meant to supplement one with a continuous testing approach. By shifting performance testing into the build pipeline, a team can be confident that their application is at least performant and that no degradations are being introduced with new changes. This, in turn, should make a subsequent larger scale performance test more routine in future.
 
 ## Possibility of expanding the suite
 - 10 requests over the course of 10 seconds is very low - you may want to tailor this to your needs, while retaining the fast feedback loop of a short test
