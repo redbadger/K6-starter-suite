@@ -27,8 +27,11 @@ The suite is a proof of concept only, running a single test against a very basic
 ## Getting started
 
 Copy the repo - `Git clone https://github.com/redbadger/K6-starter-suite.git`
+
 Install dependencies - `yarn install`
+
 Run node server locally - `yarn start`
+
 Run K6 locally - `k6 run tests/index.js`
 
 To see the CI pipeline in action, create a branch on your cloned repo and push new changes to GitHub (`git push origin <branch name`)
