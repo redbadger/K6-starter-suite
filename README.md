@@ -14,6 +14,7 @@ The suite is a proof of concept only, running a single test against a very basic
 - Fails if the predefined threshold for performance is not met, consequentally failing the build
 - Prevents degradations in performance making their way into master
 - Sends graphical output to the cloud for displaying on K6's dashboards - https://app.k6.io/ (This will require you to set up a trial account, which allows for 50 test runs. Alternatively, the results can be output to the console, Grafana via InfluxDB, or as a JSON file)
+- A few example screenshots can be found in the wiki within this repo
 
 ## What is this suite not?
 This is not designed to replace a comprehensive performance test, it is meant to supplement one with a continuous testing approach. By shifting performance testing into the build pipeline, a team can be confident that their application is at least performant and that no degradations are being introduced with new changes. This, in turn, should make a subsequent larger scale performance test more routine in future.
