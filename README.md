@@ -33,6 +33,8 @@ Copy the repo - `Git clone https://github.com/redbadger/K6-starter-suite.git`
 
 Install dependencies - `yarn install`
 
+Install K6 (required to run locally(also requires brew - https://brew.sh/)) - `brew install k6`
+
 Run node server locally - `yarn start`
 
 Run K6 locally - `k6 run tests/index.js`
