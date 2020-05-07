@@ -20,3 +20,15 @@ The suite is a proof of concept only, running a single test against a very basic
 - A paid for K6 dashboard account would allow for more than 50 test runs
 - GitHub Actions workflow runs on MacOS and currently does not leverage Docker - this could be added
 - The current threshold is arbitary and the wait time within the API artificial. The threshold should be tailored to the application under test
+- Currently, the performance test runs on every push to GitHub. This may be excessive, so could be reduced to only occur within a pull request or on a merge to master
+- More failure scenarios could be added, i.e. fail the test if any non-200 responses are returned
+
+
+## Getting started
+
+Copy the repo - `Git clone https://github.com/redbadger/K6-starter-suite.git`
+Install dependencies - `yarn install`
+Run node server locally - `yarn start`
+Run K6 locally - `k6 run tests/index.js`
+
+To see the CI pipeline in action, create a branch on your cloned repo and push new changes to GitHub (`git push origin <branch name`)
