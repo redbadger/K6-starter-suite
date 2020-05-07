@@ -11,7 +11,7 @@ The suite is a proof of concept only, running a single test against a very basic
 - Runs a 10 second performance test against a single endpoint
 - Determines the average amount of time it takes for a 200 http response to be returned
 - Runs within a GitHub Actions workflow on every push (this could be amended to every Pull Request or merge to master)
-- Fails if the threshold for performance is not met, consequentally failing the build
+- Fails if the predefined threshold for performance is not met, consequentally failing the build
 - Prevents degradations in performance making their way into master
 - Sends graphical output to the cloud for displaying on K6's dashboards - https://app.k6.io/ (This will require you to set up a trial account, which allows for 50 test runs. Alternatively, the results can be output to the console, Grafana via InfluxDB, or as a JSON file)
 
