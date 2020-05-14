@@ -9,7 +9,7 @@ on:
 jobs:
   k6_local_test:
     name: k6 local test on macos
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
   
     steps:
     - name: Checkout
